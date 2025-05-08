@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --dude-blue: rgb(39, 141, 182);
+    --dude-purple: rgb(171, 121, 194);
+}
+
+html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+    font-size:20px;
+    color:white;
+    font-family:'Kumbh Sans', serif;
+
+}
+
+body {
+    background-image: url("dudeperfectlogo.svg"),
+    linear-gradient(155deg,rgb(8, 8, 8) 0%, rgb(15, 16, 17) 46%, rgba(0, 0, 0, 1) 100%);
+    background-repeat: repeat;
+    background-size:65px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#dudelogo {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+    margin:0;
+}
+
+.pulse {
+    animation: pulse 0.46875s infinite ease-in-out;
+}
+
+    @keyframes pulse {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.2); }
+    50% { transform: scale(0.95); }
+    75% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+
+#dudelogo img {
+    width: 290px;
+    margin-bottom:15px;
+    z-index:99;
+}
+
+#dudelogo:hover {
+    cursor:pointer;
+}
+
+h1 {
+    text-align:center;
+    font-weight:300;
+    padding:0px;
+    margin:0;
+    font-size:50px;
+}
+
+h2 {
+    font-weight:400;
+    text-align: center;
+    padding: 0;
+    margin:0;
+    font-size:20px;
+}
+
+#splash-container {
+    padding-top:0px;
+    padding-bottom:0px;
+    position:relative;
+    display:inline-block;
+}
+
+#splash-text {
+    text-align: center;
+    font-weight:400;
+    color:rgb(255, 230, 0);
+    text-shadow: -1px 1px 3px black;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    margin-top:-16px;
+    animation: splash 1.5s infinite ease-in-out;
+}
+
+    @keyframes splash {
+        0%, 100% {
+        transform: scale(1);
+        }
+        50% {
+        transform: scale(1.05);
+        }
+    }
+
+b {
+    font-weight:bold;
+}
+
+.iconify {
+    color: var(--dude-blue);
+    font-size:60px;
+}
+
+.iconify:hover {
+    color:var(--dude-purple);
+    transition: color 0.3s ease-out;
+}
+
+.not-available {
+    color: grey;
+}
+
+.not-available:hover {
+    animation: no 0.2s ease-in-out;
+    color:grey;
+    cursor: not-allowed;
+}
+
+
+@keyframes no {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+.buttons {
+    padding:0px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+
+}
+
+#online, #offline {
+    display: none;
+  }
+
+#online > #indicator {
+    color:rgb(0, 255, 0);
+    animation: online 1.6s infinite ease-in-out;
+}
+
+@keyframes online {
+    0% { opacity: 100%; }
+    50% {opacity: 50%;}
+    100% { opacity: 100%; }
+  }
+
+#offline > #indicator {
+    color:rgb(255, 0, 0);
+    animation: online 1s infinite ease-in-out;
+}
+
+#s-online > #play {
+    color: rgb(128, 64, 212);
+    animation: online 1.6s infinite ease-in-out;
+}
+
+#s-not > #play {
+    color: orange;
+    animation: online 1s infinite ease-in-out;
+}
+
+#s-offline > #play {
+    color: rgb(255, 0, 0);
+    animation: online 1s infinite ease-in-out;
+}
+
+svg {
+    color: white;
+}
+
+#leaderboard {
+    text-align: center;
+    font-weight:100;
+    font-size:18px;
+    width:300px;
+    padding-top:10px;
+}
+
+.highlight {
+    font-weight:700;
+    color: var(--dude-purple);
+}
+
+nav {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+        margin:9px;
+        color:#3b3c3f;
+    
+}
+
+nav a {
+    transition: letter-spacing 0.3s ease, color 0.3s ease;
+    font-size:20px;
+    color:rgb(146, 156, 165);
+    text-decoration: none;
+}
+
+nav a:hover {
+    letter-spacing: 0.2em;
+    color:var(--dude-blue);
+    text-shadow: 1px 1px 3px var(--dude-blue);
+}
+
+nav span {
+    font-size:50px;
+    padding:5px;
+}
+
+header {
+    position:relative;
+    background-color:rgb(0, 3, 209);
+    border-radius:15px;
+    padding:10px;
+        padding-top:5px;
+    margin:0;
+    background: linear-gradient(to bottom, rgb(39, 141, 182), #252e7a);
+    overflow:hidden;
+}
+
+#status {
+    background-color:rgb(34, 34, 34);
+    padding:10px;
+    font-family: Garamond, serif;
+    font-size:16px;
+    width:260px;
+    border-top-left-radius:15px;
+    border-bottom-right-radius:15px;
+    font-family:'Source Code Pro', serif;
+}
+
+#status h1 {
+    font-size:19px;
+}
+
+.stats {
+    display:flex;
+    justify-content: center;
+    padding:10px;
+    border-top: 1px solid rgb(0, 0, 0);
+    background-color:rgb(24, 23, 23);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.stats th {
+    padding:6px;
+    font-weight: 500;
+    padding-right:10px;
+}
+
+.stats td {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#00000000;
+    text-align: center;
+    padding:10px;
+    border-left: solid black;
+    border-bottom: solid black;
+    background-color:rgb(29, 29, 29);
+}
+
+#status p {
+    text-align: center;
+}
+
+#stream-status {
+    display:flex;
+    flex-direction: column;
+}
+
+#audience {
+    opacity:60%;
+    margin-top:1px;
+}

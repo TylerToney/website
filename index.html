@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="pulse.js" defer></script>
+    <script src="status.js" defer></script>
+    <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
+    <script src="text.js" defer></script>
+    <script src="streaming.js" defer></script>
+
+    <link rel="icon" type="image/x-icon" href="dude.ico">
+    <title>DudeServer</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DudeServer">
+    <meta property="og:description" content="A server. A community. A dude.">
+    <meta property="og:image" content="https://dude.science/banner.png">
+    <meta property="og:image:secure_url" content="https://dude.science/banner.png">
+    <meta property="og:url" content="https://dude.science/">
+
+</head>
+<body>
+
+    <figure id="dudelogo">
+        <audio id="weirdscience" src="DudeScience.mp3"></audio>
+        <img src="dudelogosquare.png" id="dudeimage">
+
+    </figure>
+    
+    <header>
+        <h1><b>Dude</b>Server</h1>
+    </header>
+
+        <section id="splash-container">
+            <h2 id="splash-text"></h2>
+        </section>
+
+    <nav>
+        <a  href="/standby">LOGIN</a>
+    </nav>
+
+    <section id="status">
+
+        <h1>STATUS</h1>
+
+            <table class="stats">
+                <tr>
+                    <th>Server</th>
+                    <td><p id="online"><span id="indicator">●</span> Online</p>
+                        <p id="offline"><span id="indicator">●</span> Offline</p></td>
+                  </tr>
+                <tr>
+                    <th>Stream</th>
+                        <td id="stream-status">
+                            <p id="s-online" style="display: none;"><span id="play">▶</span> Streaming</p>
+
+                            <p id="s-not" style="display: none;"><span id="play">?</span> Not Streaming</p>
+
+                            <p id="s-offline" style="display: none;"><span id="play">×</span> Offline</p>
+
+
+                            <p id="audience"><span id="viewers">finding</span> viewers</p>
+                        </td>
+
+            </table>
+        
+
+    </section>
+
+    <section id="leaderboard" style="display:none;">
+        <p>There are currently <span class="highlight">2</span> dudes enjoying the stream.</p>
+        <p>Current peak is <span class="highlight">0</span>, accomplished on xyz</p>
+    </section>
+    
+</body>
+</html>
